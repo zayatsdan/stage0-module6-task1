@@ -5,14 +5,14 @@ public class Animal {
   private int numberOfPaws;
   private boolean hasFur;
 
-  // Constructor with full parameters
+
   public Animal(String color, int numberOfPaws, boolean hasFur) {
     this.color = color;
     this.numberOfPaws = numberOfPaws;
     this.hasFur = hasFur;
   }
 
-  // Method to get the description of the animal
+  
   public String getDescription() {
     String furDescription = hasFur ? "a" : "no";
     String pawDescription = numberOfPaws == 1 ? "paw" : "paws";
@@ -21,7 +21,7 @@ public class Animal {
             color, numberOfPaws, pawDescription, furDescription);
   }
 
-  // Getter methods (optional)
+  
   public String getColor() {
     return color;
   }
@@ -35,7 +35,7 @@ public class Animal {
   }
 
   public static void main(String[] args) {
-    // Example usage
+   
     Animal cat = new Animal("gray", 4, true);
     Animal snake = new Animal("green", 1, false);
 
