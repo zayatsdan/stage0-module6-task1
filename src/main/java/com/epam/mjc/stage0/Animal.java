@@ -4,18 +4,46 @@ public class Animal {
   private String color;
   private int numberOfPaws;
   private boolean hasFur;
-  
-  public String getColor{
-  return color;}
-  public int getPaws{
-  return numberOfPaws;}
-  public boolean gerFur{
-    return hasFur;}
 
-  public  getDescription(){
-      System.out.println("This animal is mostly "+getColor+". It has "+if(getPaws=1){"a paw "}else{getPaw+" paws "}+"and "+if(getFur==false){"a fur."}else{"no fur."});
+  // Constructor with full parameters
+  public Animal(String color, int numberOfPaws, boolean hasFur) {
+    this.color = color;
+    this.numberOfPaws = numberOfPaws;
+    this.hasFur = hasFur;
   }
-  public static void main (String[]args){
-    Animal animal = new Animal;
-    c
+
+  // Method to get the description of the animal
+  public String getDescription() {
+    String furDescription = hasFur ? "a" : "no";
+    String pawDescription = numberOfPaws == 1 ? "paw" : "paws";
+
+    return String.format("This animal is mostly %s. It has %d %s and %s fur.",
+            color, numberOfPaws, pawDescription, furDescription);
+  }
+
+  // Getter methods (optional)
+  public String getColor() {
+    return color;
+  }
+
+  public int getNumberOfPaws() {
+    return numberOfPaws;
+  }
+
+  public boolean hasFur() {
+    return hasFur;
+  }
+
+  public static void main(String[] args) {
+    // Example usage
+    Animal cat = new Animal("gray", 4, true);
+    Animal snake = new Animal("green", 1, false);
+
+    System.out.println(cat.getDescription());
+    System.out.println(snake.getDescription());
+    Bird bird=new Bird();
+    System.out.println(bird.getDescription());
+    Dog dog=new Dog();
+    System.out.println(dog.getDescription());
+  }
 }
